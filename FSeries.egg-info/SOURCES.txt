@@ -1,8 +1,0 @@
-README.md
-setup.py
-FSeries/__init__.py
-FSeries.egg-info/PKG-INFO
-FSeries.egg-info/SOURCES.txt
-FSeries.egg-info/dependency_links.txt
-FSeries.egg-info/requires.txt
-FSeries.egg-info/top_level.txt

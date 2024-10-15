@@ -1,5 +1,5 @@
 """
-FSeries - A library for computing Fourier coefficients.
+epic_fourier - A library for computing Fourier coefficients.
 
 This package provides tools to compute Fourier coefficients for periodic functions.
 """
@@ -17,4 +17,4 @@ logging.basicConfig(
 )   
 
 logger = logging.getLogger(__name__)
-logger.info('FSeries package initialized, have fun :)')
+logger.info('epic_fourier package initialized, have fun :)')

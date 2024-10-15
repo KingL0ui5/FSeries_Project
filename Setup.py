@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='FSeries',  # Replace with your library name
+    name='epic_fourier',  # Replace with your library name
     version='0.1.0',
     author='Louis Liu',
     author_email='LiuLouis1@gmail.com',
@@ -20,5 +20,6 @@ setup(
     ],
     python_requires='>=3.6',
     long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
     url = 'https://github.com/KingL0ui5/FSeries-Python-Library',
 )

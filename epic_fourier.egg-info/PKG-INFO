@@ -1,3 +1,20 @@
+Metadata-Version: 2.1
+Name: epic_fourier
+Version: 0.1.0
+Summary: A library for computing Fourier Series made for Physics Students!
+Home-page: https://github.com/KingL0ui5/FSeries-Python-Library
+Author: Louis Liu
+Author-email: LiuLouis1@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+
 Hello!
 
 It has become evident to me that Python Scipy lacks a Fourier SERIES function! Unbelievable! I have made this for my peers in the Imperial College London Physics Department, I hope you find it useful :). 
