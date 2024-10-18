@@ -50,8 +50,7 @@ class series:
         
         L = T / 2
         N = len(x)
-        x_values = x.to_numpy()
-        differences = np.diff(x_values)
+        differences = np.diff(x)
         dt = np.mean(differences)
         nperiods = x.max()/T
 
