@@ -26,7 +26,7 @@ class series:
                     [ 0.4040404   0.39313661]]
             #the first column here is x, the second is y
      
-            series, a_n, b_n, a_0 = FSeries.series.nFSeries(data, 240, 20)
+            series, a_n, b_n, a_0 = epic_fourier.series.nFSeries(data, 240, 20)
             --------------------------------------------------------------
             
             data = [[ 0.          0.        ]
@@ -36,7 +36,7 @@ class series:
                     [ 0.4040404   0.39313661]]
             df = pd.DataFrame(data, columns=['x', 'y'])
 
-            series, a_n, b_n, a_0 = FSeries.series.nFSeries(df, 120, 40)
+            series, a_n, b_n, a_0 = epic_fourier.series.nFSeries(df, 120, 40)
         """
 
         if isinstance(data, pd.DataFrame):
@@ -73,12 +73,12 @@ class series:
 
         return np.array(series), np.array(a_n), np.array(b_n), a_0
 
-    def FSeries(x, f, T:float, n_terms:int = 10):
+    def FSeries(x, f: callable, T:float, n_terms:int = 10):
         """
         Compute the Fourier coefficients (a_n, b_n, a_0) for a periodic function f(x) using numerical integration.
 
         Parameters:
-            x: array type int/float - the 'x' axis column
+            x: list or tuple - the 'x' axis column
             f: function - the function to be decomposed
             T: float - period of the function (if periodic), or interval length (if non-periodic)
             n_terms: int - number of Fourier terms (default is 10)
@@ -95,12 +95,18 @@ class series:
                 return 0.5 * np.sin(3 * x) + 0.25 * np.cos(4 * x)
 
             T = np.pi
-            series, a_n, b_n, a_0 = FSeries(x, f_custom, T=T, n_terms=10)
+            series, a_n, b_n, a_0 = epic_fourier.series.FSeries(x, f_custom, T=T, n_terms=10)
 
             #You can also plot the series function:
             plt.plot(x, series, label='Fourier Series Approximation')
 
         """
+        if not isinstance(x, (list, tuple)):
+            raise TypeError("The 'x' parameter must be a list or tuple.")
+
+        if not callable(f):
+            raise TypeError("The 'f' parameter must be a callable function.")
+    
         L = T / 2  
 
         a_n = []

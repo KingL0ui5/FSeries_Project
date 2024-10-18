@@ -3,8 +3,9 @@ epic_fourier - A library for computing Fourier coefficients.
 
 This package provides tools to compute Fourier coefficients for periodic functions.
 """
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
+from .epic_fourier import series
 import logging
 
 logging.basicConfig(

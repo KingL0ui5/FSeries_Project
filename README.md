@@ -32,7 +32,7 @@ Happy coding!
                 return 0.5 * np.sin(3 * x) + 0.25 * np.cos(4 * x)
 
             T = np.pi
-            series, a_n, b_n, a_0 = FSeries(x, f_custom, T=T, n_terms=10)
+            series, a_n, b_n, a_0 = epic_fourier.series.FSeries(x, f_custom, T=T, n_terms=10)
 
             #You can also plot the series function:
             plt.plot(x, series, label='Fourier Series Approximation')
@@ -60,7 +60,7 @@ Happy coding!
                     [ 0.4040404   0.39313661]]
             #the first column here is x, the second is y
      
-            series, a_n, b_n, a_0 = FSeries.series.nFSeries(data, 240, 20)
+            series, a_n, b_n, a_0 = epic_fourier.series.nFSeries(data, 240, 20)
             
         
             data = [[ 0.          0.        ]
@@ -70,7 +70,7 @@ Happy coding!
                     [ 0.4040404   0.39313661]]
             df = pd.DataFrame(data, columns=['x', 'y'])
 
-            series, a_n, b_n, a_0 = FSeries.series.nFSeries(df, 120, 40)
+            series, a_n, b_n, a_0 = epic_fourier.series.nFSeries(df, 120, 40)
 
 
             #You might even find this useful with the scipy.signal.sawtooth 
@@ -80,6 +80,4 @@ Happy coding!
             data = np.column_stack((x, f_values))
 
             T = 2 * np.pi  # Period of the sawtooth wave
-            series, a_n, b_n, a_0 = FSeries.series.nFSeries(data, T, n_terms=10)
-
-
+            series, a_n, b_n, a_0 = epic_fourier.series.nFSeries(data, T, n_terms=10)

@@ -5,7 +5,7 @@ setup(
     version='0.1.0',
     author='Louis Liu',
     author_email='LiuLouis1@gmail.com',
-    description='A library for computing Fourier Series made for Physics Students!',
+    description='A library for computing Fourier Series made for Physics Students!\nepic_fourier.series:\n\t-> nFSeries, used to find the Fourier Series Expansion of a numerical dataset\n\t-> FSeries, used to find the Fourier Series Expansion of a callable function',
     license='MIT',
     packages=find_packages(),
     install_requires=[
